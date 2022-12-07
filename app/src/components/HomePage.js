@@ -26,8 +26,8 @@ const HomePage = () => {
         functionName: "whitelistDeadline",
         onSuccess(data) {
             setDeadline(new Date(parseInt(data.toString()) * 1000));
-            
             setDeadlineReached(new Date(parseInt(data.toString()) * 1000) < now.toLocaleString());
+            
         }
     });
 
@@ -123,7 +123,7 @@ const HomePage = () => {
                     :
                     <ul >
                         <li>
-                            Deadline: {deadline.toLocaleString()}
+                            Deadline: {deadline.getDate() - now.getDate()} Days
                         </li>
                         <li>
                             Whitelisted Addresses: {addressWhitelisted } / {maxAddressToWhitelist}
