@@ -10,52 +10,146 @@
 }
 .Home-inner {
     position: absolute;
-    top: 12rem;
-    left: 10rem;
+    top: 16rem;
+    left: 8rem;
     width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+h1 {
+    position: absolute;
+    left: 8rem;
+    top: 7rem;
+}
+.description {
+    position: absolute;
+    left: 8rem;
+    top: 8rem;
+    line-height: 2rem;
+}
+img {
+    position: relative;
+    left: 15rem;
+    
+    width: 50%;
+    height: 70%;
 }
 button {
-    padding: 1rem;
     
-    width: 30%;
-    height: 20%;
+    
+    width: 160px;
+    height: 40px;
     border-radius: 0.5rem;
     border: none;
-    background-color: rgba(81, 148, 247, 1);
+    background-color: rgba(237, 109, 107, 1);
     color: white;
     font-size: 1rem;
-}
+    
+ }
+ .whitelisted-address-msg {
+    width: 8%;
+    height: 100%;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    
+ }
+ .msg-whitelisted-div {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    height: 5%;
+    width: 300px;
+    border-radius: 1rem;
+    
+    background-color: greenyellow
+    
+ }
+ .msg-finished-whitelist {
+    background-color: rgba(237, 109, 107, 1);
+ }
+ .whitelist-btn-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .msg-whitelisted-p { 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
 button:hover {
     cursor: pointer;
+    background-color: rgba(237, 120, 127, 1);
 }
 button:disabled {
-   background-color: rgba(81, 148, 247, 0.8);
+   background-color: rgba(237, 109, 107, 0.8);
    cursor: not-allowed;
 }
 ul {
     
     position: absolute;
-    top: 8rem;
+    top: 10rem;
     left: 1rem;
     height: 5%;
 }
 
 
-h3 {
-    margin-top: 2rem;
-    position: absolute;
-    top: 7rem;
-    height: 10%;
-    
-}
 .whitelist-btn-span {
     position: absolute;
-    top: 4rem;
-    height: 30%;
-    width: 100%;
+   
+    left: 12rem;
+}
+.discount-span {
+    color: rgba(237, 109, 107, 1);
+}
+
+
+@media only screen and (max-width: 500px) {
+    .Home {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    h1 {
+        top: 4rem;
+       line-height: 3rem;
+        font-size:2rem;
+        width: 80%;
+        left: 2rem;
+    }
+    .description {
+        top: 11rem;
+        left: 2rem;
+        width: 80%;
+    }
+    .Home-inner {
+        display: flex;
+        top: 20rem;
+        left: 2rem;
+        
+    }
+   
+    
+    .msg-whitelisted-div {
+        top: 4rem;
+    }
+    img {
+        left: 5rem;
+        top: 10rem;
+    }
+    ul {
+        top: 10rem;
+    }
+    .whitelist-btn-span {
+        left: 11rem;
+    }
 }
