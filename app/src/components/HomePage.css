@@ -147,7 +147,11 @@ ul {
         top: 10rem;
     }
     ul {
-        top: 10rem;
+        top: 8rem;
+        
+    }
+    li {
+        margin-top: 2rem;
     }
     .whitelist-btn-span {
         left: 11rem;

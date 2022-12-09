@@ -11,6 +11,7 @@ import {useWeb3ModalTheme} from '@web3modal/react'
 import {MdVerified} from 'react-icons/md';
 import ReactLoading from "react-loading";
 import {BsEmojiSmileUpsideDownFill} from 'react-icons/bs'
+import {AiFillTwitterCircle, AiFillGithub} from 'react-icons/ai'
 
 const HomePage = () => {
     "use strict"
@@ -107,6 +108,13 @@ const HomePage = () => {
                
                 {  
                     account.address == OWNER_ADDRESS ? 
+                    !deadlineReached ? 
+                    <span className="whitelist-btn-span">
+                    <button className="whitelist-btn" disabled={deadlineReached || addressWhitelisted >= maxAddressToWhitelist || !account.address} onClick={whitelist}> 
+                      Whitelist
+                    </button> 
+                    </span>
+                    :
                     <span className="whitelist-btn-span">
                     <button className="whitelist-btn" onClick={startWhitelist} disabled={deadline.toLocaleString > now.toLocaleString() || maxAddressToWhitelist !== 0}> 
                         Start Whitelist
@@ -153,7 +161,7 @@ const HomePage = () => {
                     </div>
                     <ul >
                     <li>
-                        Deadline: {deadline.getDate() - now.getDate()} Days remaining
+                        Deadline: {deadline.toLocaleString()} Days remaining
                     </li>
                     <li>
                         Whitelisted Addresses: {addressWhitelisted } / {maxAddressToWhitelist}
@@ -163,7 +171,7 @@ const HomePage = () => {
                     :
                     <ul >
                         <li>
-                            Deadline: {deadline.getDate() - now.getDate()} Days remaining
+                            Deadline: {deadline.toLocaleString()} 
                         </li>
                         <li>
                             Whitelisted Addresses: {addressWhitelisted } / {maxAddressToWhitelist}
@@ -171,7 +179,7 @@ const HomePage = () => {
                     </ul>
                 }
                
-                
+               
             </div>
         </div>
     )
